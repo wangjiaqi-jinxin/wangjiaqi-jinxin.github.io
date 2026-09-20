@@ -4,6 +4,9 @@
   const main = document.querySelector('main');
   if (main && !main.id) main.id = 'main-content';
   if (main && !document.querySelector('.skip-link')) document.body.insertAdjacentHTML('afterbegin', '<a class="skip-link" href="#main-content">跳到主要内容</a>');
+  const isHome = /\/(?:index\.html)?$/.test(location.pathname);
+  const homeHref = location.pathname.includes('/posts/') ? '../index.html' : 'index.html';
+  if (!isHome && !document.querySelector('.return-home')) document.body.insertAdjacentHTML('afterbegin', `<a class="return-home" href="${homeHref}" aria-label="返回博客首页"><span aria-hidden="true">←</span> 返回首页</a>`);
 
   document.title = document.title.replaceAll('王家琪', '近心');
   const description = document.querySelector('meta[name="description"]');
