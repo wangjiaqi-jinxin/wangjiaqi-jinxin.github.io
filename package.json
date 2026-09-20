@@ -1,0 +1,14 @@
+{
+  "name": "jinxin-notes",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "highlight.js": "^11.11.1",
+    "katex": "^0.16.22",
+    "marked": "^15.0.7"
+  }
+}

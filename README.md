@@ -1,12 +1,23 @@
-# 王家琪的博客
+# JINXIN · NOTES
 
-这是可直接部署到 GitHub Pages 的静态博客首页。
+基于 GitHub Pages 的静态 Markdown 博客。公开站点：<https://wangjiaqi-jinxin.github.io>。
 
-## 免费发布
+## 写一篇新文章
 
-1. 在 GitHub 新建一个 **公开** 仓库，名称必须是 `wangjiaqi-jinxin.github.io`。
-2. 将本目录中的 `index.html` 上传到仓库根目录并提交到 `main` 分支。
-3. 打开仓库的 **Settings → Pages**，在 **Build and deployment** 中选择 **Deploy from a branch**，然后选择 `main` 和 `/(root)`，保存。
-4. 等待几分钟后访问 `https://wangjiaqi-jinxin.github.io`。
+1. 复制 [content/posts/post-template.md](content/posts/post-template.md)，用英文短横线命名，例如 `my-new-post.md`。
+2. 填写标题、日期、标签、摘要与正文；代码块、图片链接和 KaTeX 公式均可使用。
+3. 在项目根目录运行：
 
-发布前请把 `index.html` 内 `hello@example.com` 改成你的公开联系方式，或删除“联系”链接。
+   ```powershell
+   npm run build
+   ```
+
+4. 检查生成的 `posts/my-new-post.html` 与 `blog.html`，然后提交并推送：
+
+   ```powershell
+   git add .
+   git commit -m "Add my new post"
+   git push
+   ```
+
+首次在新电脑使用时先运行一次 `npm install`。生成的 HTML、公式样式与字体都需要一并提交，GitHub Pages 不需要额外服务器或构建配置。

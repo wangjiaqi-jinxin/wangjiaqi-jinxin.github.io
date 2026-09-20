@@ -10,16 +10,6 @@
   let node;
   while (node = walker.nextNode()) node.nodeValue = node.nodeValue.replaceAll('王家琪', '近心').replaceAll('Wang Jiaqi', '近心');
 
-  const blogList = document.querySelector('.post-list');
-  if (location.pathname.endsWith('/blog.html') && blogList && !document.getElementById('engineering-notes')) {
-    const archive = blogList.querySelector('.archive-year');
-    archive.insertAdjacentHTML('afterend', `
-      <div id="engineering-notes">
-        <article class="post-row"><p class="post-date">2026.09.20</p><div><div class="tags"><span>Robot</span><span>Servo</span><span>Motion Planning</span></div><h3><a href="posts/continuous-motion.html">连续机器人运动为什么仍会卡顿：从离散 Servo 到在线接管</a></h3><p>从离散导数、S 曲线、SwitchPoint 和 C² 融合，解释连续工艺的真实边界。</p><span class="meta">10 分钟阅读 · 工程笔记</span></div></article>
-        <article class="post-row"><p class="post-date">2026.09.20</p><div><div class="tags"><span>Robot</span><span>Multi-axis</span><span>Control</span></div><h3><a href="posts/multiaxis-sync.html">多轴连续工艺如何共享同一时间轴</a></h3><p>机器人、外部轴与输送线的几何关系、时间重锚和可观测性方法。</p><span class="meta">9 分钟阅读 · 工程笔记</span></div></article>
-      </div>`);
-  }
-
   const stored = localStorage.getItem('wjq-theme');
   if (stored === 'light') document.body.classList.add('light');
   const button = document.querySelector('.theme-toggle');
