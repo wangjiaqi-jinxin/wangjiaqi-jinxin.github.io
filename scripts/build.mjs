@@ -30,7 +30,7 @@ marked.use({ renderer: { code({ text, lang }) {
 }}});
 
 function background() {
-  return '<div class="interactive-bg" aria-hidden="true"><div class="wallpaper"></div><div class="grid-bg" id="gridBg"></div><div class="mouse-glow" id="mouseGlow"></div><i class="floating-dot dot-1"></i><i class="floating-dot dot-2"></i><i class="floating-dot dot-3"></i></div>';
+  return '<div class="interactive-bg" aria-hidden="true"><div class="wallpaper"></div><canvas class="signal-field" id="signalField"></canvas><div class="grid-bg" id="gridBg"></div><div class="mouse-glow" id="mouseGlow"></div><i class="floating-dot dot-1"></i><i class="floating-dot dot-2"></i><i class="floating-dot dot-3"></i></div>';
 }
 
 function nav(relative = '') {
