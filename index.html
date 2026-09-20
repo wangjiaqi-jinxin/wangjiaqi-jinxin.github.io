@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="wangjiaqi-jinxin 的个人博客。" />
+    <meta name="description" content="王家琪的技术博客：机器人控制、轨迹规划、C++ 与嵌入式开发。" />
     <meta name="theme-color" content="#113642" />
-    <title>王家琪的博客</title>
+    <title>王家琪 · 技术笔记</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23113642'/%3E%3Cpath d='M18 17h28v7H25v9h17v7H25v14h-7V17Z' fill='%23f6eee0'/%3E%3C/svg%3E" />
     <style>
       :root { --ink:#113642; --paper:#f7f4ed; --line:#d9d7cd; --accent:#d84a31; --muted:#5f6867; }
@@ -34,33 +34,17 @@
       footer { padding:28px 0 40px; color:var(--muted); font:500 .8rem/1.5 ui-sans-serif, system-ui, sans-serif; }
       @media (max-width:600px) { .wrap{padding:0 20px} .nav{min-height:64px} .nav-links{gap:14px;font-size:.82rem} main{padding:64px 0 48px} .post{grid-template-columns:1fr;gap:10px;padding:25px 0} .rule{margin-top:54px} }
     </style>
+    <link rel="stylesheet" href="assets/site.css" />
+    <script defer src="assets/site.js"></script>
   </head>
   <body>
-    <header>
-      <nav class="wrap nav" aria-label="主导航">
-        <a class="mark" href="/">WJQ / NOTES</a>
-        <div class="nav-links">
-          <a href="#writing">文章</a>
-          <a href="mailto:hello@example.com">联系</a>
-        </div>
-      </nav>
-    </header>
-    <main class="wrap">
-      <p class="eyebrow">Personal notebook</p>
-      <h1>记录正在发生的思考。</h1>
-      <p class="intro">这里是 wangjiaqi-jinxin 的个人博客。关于学习、工作、生活中值得慢下来想一想的事，都写在这里。</p>
-      <hr class="rule" />
-      <section id="writing" aria-labelledby="writing-title">
-        <div class="section-head"><h2 id="writing-title">最新文章</h2><span>持续更新</span></div>
-        <article class="post">
-          <time datetime="2026-09-20">2026.09.20</time>
-          <div>
-            <h3><a href="#">从这里开始写作</a></h3>
-            <p>第一篇文章留给开始。把重要的念头写下来，也把那些暂时没有答案的问题留下来。</p>
-          </div>
-        </article>
-      </section>
+    <header class="site-header"><nav class="shell nav" aria-label="主导航"><a class="brand" href="index.html">WJQ<span>·</span>NOTES</a><div class="nav-links"><a class="active" href="index.html">首页</a><a href="blog.html">文章</a><a href="projects.html">项目</a><a href="about.html">关于</a><a href="https://github.com/wangjiaqi-jinxin" target="_blank" rel="noreferrer">GitHub ↗</a><button class="theme-toggle" type="button" aria-label="切换深色模式">◐</button></div></nav></header>
+    <main>
+      <section class="shell hero"><p class="kicker">PERSONAL TECHNICAL BLOG</p><h1>你好，我是<br />王家琪。</h1><p class="hero-copy">关注机器人控制、轨迹规划、C++ 与嵌入式开发。这里记录工程实践里的问题、推导与答案。</p><div class="actions"><a class="button primary" href="blog.html">浏览文章</a><a class="button secondary" href="projects.html">查看项目</a></div></section>
+      <section class="shell section" aria-labelledby="latest-title"><div class="section-heading"><div><p class="kicker">WRITING</p><h2 id="latest-title">最新文章</h2></div><a class="text-link" href="blog.html">全部文章 →</a></div><div class="post-list"><article class="post-row"><p class="post-date">2026.09.20</p><div><div class="tags"><span>Robot</span><span>Motion Planning</span><span>C++</span></div><h3><a href="posts/quintic-trajectory.html">离散五次多项式轨迹融合：从 PVA 边界到平滑过渡</a></h3><p>在打断或切换轨迹时，如何用位置、速度、加速度边界构造连续且可控的过渡段。</p><span class="meta">8 分钟阅读</span></div></article><article class="post-row"><p class="post-date">准备中</p><div><div class="tags"><span>Embedded</span><span>STM32</span></div><h3>STM32 从入门到能做项目：学习路径与踩坑记录</h3><p>从外设驱动到 FreeRTOS，整理一个以工程实践为目标的学习路线。</p></div></article><article class="post-row"><p class="post-date">准备中</p><div><div class="tags"><span>Robot</span><span>Engineering</span></div><h3>MoveL 连续轨迹规划的一些思考</h3><p>直线运动、速度约束与轨迹衔接中值得反复验证的细节。</p></div></article></div></section>
+      <section class="shell section split-section"><div><p class="kicker">FOCUS</p><h2>探索主题</h2><p class="section-copy">按照技术栈整理笔记，让每一篇文章都能回到一个清晰的问题域。</p></div><div class="topic-grid"><a href="blog.html#robot"><strong>Robot</strong><span>轨迹规划 · 运动控制</span></a><a href="blog.html#cpp"><strong>C++ / Qt</strong><span>工程结构 · 并发实践</span></a><a href="blog.html#embedded"><strong>Embedded</strong><span>STM32 · FreeRTOS · CAN</span></a><a href="blog.html#research"><strong>Research Notes</strong><span>论文阅读 · 方法推导</span></a></div></section>
+      <section class="shell section"><div class="section-heading"><div><p class="kicker">BUILDING</p><h2>项目与专题</h2></div><a class="text-link" href="projects.html">查看项目 →</a></div><div class="project-grid"><article><p class="project-number">01</p><h3>Robot Motion Notes</h3><p>围绕工业机器人轨迹规划、连续融合和动力学约束的实验与笔记。</p><div class="tags"><span>C++</span><span>Motion Planning</span></div></article><article><p class="project-number">02</p><h3>Embedded Learning</h3><p>从 STM32 外设到实时系统，把零散实验整理为可复用的工程记录。</p><div class="tags"><span>STM32</span><span>FreeRTOS</span></div></article></div></section>
     </main>
-    <footer class="wrap">© 2026 wangjiaqi-jinxin · Built with GitHub Pages</footer>
+    <footer class="shell footer"><p>© 2026 Wang Jiaqi</p><p>Built on GitHub Pages</p></footer>
   </body>
 </html>

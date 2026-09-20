@@ -1,0 +1,1 @@
+(() => { const stored = localStorage.getItem('wjq-theme'); if (stored === 'dark') document.body.classList.add('dark'); const button = document.querySelector('.theme-toggle'); if (button) button.addEventListener('click', () => { document.body.classList.toggle('dark'); localStorage.setItem('wjq-theme', document.body.classList.contains('dark') ? 'dark' : 'light'); }); })();
